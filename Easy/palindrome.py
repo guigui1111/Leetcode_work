@@ -20,4 +20,17 @@ my_sol = Solution()
 print(my_sol.palindrome(3532))
 
 
-print('1234'[::-1])
+class Solution:
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x < 0:
+            return False
+        else:
+            y = str(x)[::-1]
+            if y == str(x):
+                return True
+            else:
+                return False
