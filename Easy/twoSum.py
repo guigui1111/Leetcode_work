@@ -11,13 +11,14 @@ class Solution:
         for index,num in enumerate(nums):
             another_num = target - num
             if another_num in hashmap:
+                print(another_num)
                 return [hashmap[another_num],index]
             hashmap[num] = index
-#        print(hashmap)
+            print(hashmap)
         return None
 
 sol = Solution()
-print(sol.twoSum([2,7,11,15],17))
+print(sol.twoSum([2,7,11,15],18))
 
 
 ##second way
@@ -32,9 +33,9 @@ class Solution:
         for index, num in enumerate(nums):
             if target - num in nums:
                 #print([index, num])
-                print(nums.index(target-num))
+                #print(nums.index(target-num))
                 return [index, nums.index(target-num)]
 
 sol = Solution()
-print(sol.twoSum([2, 7, 11, 15],18))
+#print(sol.twoSum([2, 7, 11, 15],18))
 

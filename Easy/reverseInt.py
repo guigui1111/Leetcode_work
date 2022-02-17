@@ -16,7 +16,7 @@ class Solution:
         if string_int[0] == '-':
             my_return +='-'
         else:
-            my_return+= string_int[len(int)-1::-1].lstrip('0')
+            my_return += string_int[len(int)-1::-1].lstrip('0')
             print(my_return)
             #my_return = int(my_return)
             print(my_return)
@@ -44,3 +44,24 @@ class Solution:
         if -2**31<x<2**31-1:
             return x
         return 0
+
+
+
+class Solution:
+    def reverInt(self, int):
+        """
+        :param int: 32-bit signed integer
+        :return: int
+        """
+        my_return = ''
+        if int == 0:
+            return 0
+        elif int < 0:
+            my_return += '-'
+        x = str(int)
+        my_return += x[len(x) - 1::-1].rstrip('-').lstrip('0')
+        return my_return
+
+answer = Solution()
+print(answer.reverInt(-1240))
+
