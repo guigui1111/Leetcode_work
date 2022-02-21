@@ -1,24 +1,23 @@
-#Question 4:
-#(Roman to Integer):
-#Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-#link: https://leetcode-cn.com/problems/roman-to-integer/
+#Question 5:
+#(Longest Common Prefix):
+#Write a function to find the longest common prefix string amongst an array of strings.
+#If there is no common prefix, return an empty string "".
+#link: https://leetcode-cn.com/problems/longest-common-prefix/
 
 class Solution:
-    def romanToInt(self,roman):
+    def maxPre(self,array1):
         """
-        :param roman: string
-        :return: int
+        :param array1:
+        :return: string
         """
-        my_dic = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
-        my_return = 0
-        for i in range(len(roman)):
-            if i < len(roman)-1 and my_dic[roman[i]] < my_dic[roman[i+1]]:
-                my_return -= my_dic[roman[i]]
-            else:
-                my_return += my_dic[roman[i]]
-        return my_return
+        s1 = min(array1)
+        s2 = max(array1)
+        #print(s1)
+        for i, x in enumerate(s1):
+            if x != s2[i]:
+                return s2[:i]
 
-my_sol = Solution()
-print(my_sol.romanToInt('XIV'))
+sol = Solution()
+print(sol.maxPre(["flower","flow","flight"]))
 
 
