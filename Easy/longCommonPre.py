@@ -20,3 +20,6 @@ class Solution:
 
 sol = Solution()
 print(sol.maxPre(["flower", "flow", "flight"]))
+
+
+###s1 = min(array1) is right, if s1 = min(array1,key=len) won't be right
